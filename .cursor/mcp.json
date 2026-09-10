@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "enertiv-app": {
+      "url": "https://app.enertiv.com/mcp"
+    }
+  }
+}
