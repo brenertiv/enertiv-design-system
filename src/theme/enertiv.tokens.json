@@ -1,0 +1,894 @@
+{
+  "$metadata": {
+    "tokenSetOrder": ["primitive", "semantic/light", "semantic/dark"]
+  },
+  "$description": "Enertiv Design System — W3C DTCG token architecture. B2B energy/ESG SaaS, enterprise UI. Supports light (neutral-gray) and dark (blue-steel) modes. Import into Tokens Studio; apply primitive set globally, then one semantic set per theme.",
+
+  "primitive": {
+    "$description": "Raw values — no semantic meaning. Never reference these directly in components.",
+
+    "color": {
+      "$type": "color",
+
+      "neutral": {
+        "$description": "Warm gray scale for light-mode UI surfaces, borders, and text. Steps match the UI_LIGHT scale in const.ts.",
+        "0": {"$value": "#FFFFFF", "$description": "Pure white — canvas"},
+        "2": {"$value": "#FAFAFA"},
+        "4": {"$value": "#F7F8F7"},
+        "6": {"$value": "#F2F2F2"},
+        "8": {"$value": "#F0F1F0"},
+        "10": {"$value": "#EAEAEA"},
+        "12": {"$value": "#E7E8E8"},
+        "16": {"$value": "#E0E1E1"},
+        "24": {"$value": "#D1D3D2"},
+        "32": {"$value": "#C1C3C2"},
+        "40": {"$value": "#B2B5B4"},
+        "48": {"$value": "#A3A6A5"},
+        "56": {"$value": "#939796"},
+        "64": {"$value": "#848887"},
+        "72": {"$value": "#747977"},
+        "80": {"$value": "#656A69"},
+        "88": {"$value": "#3E4543"},
+        "92": {"$value": "#212524"},
+        "100": {"$value": "#0D0F0F", "$description": "Near-black"}
+      },
+
+      "navy": {
+        "$description": "Blue-steel scale for dark-mode UI surfaces, borders, and text. Steps match the UI_DARK scale in const.ts. Also used as brand navy in light mode (nav, primary buttons).",
+        "0": {"$value": "#FFFFFF"},
+        "8": {"$value": "#ECEFF1"},
+        "12": {"$value": "#E3E6EA"},
+        "16": {"$value": "#D9DEE3"},
+        "20": {"$value": "#D0D6DC"},
+        "24": {"$value": "#C6CED5"},
+        "32": {"$value": "#B3BDC7"},
+        "56": {"$value": "#7B8C9D"},
+        "64": {"$value": "#687B8F"},
+        "72": {"$value": "#556B81"},
+        "80": {"$value": "#425B73"},
+        "88": {
+          "$value": "#2F4A65",
+          "$description": "Primary navy — dark mode primary action"
+        },
+        "92": {"$value": "#26425E"},
+        "96": {"$value": "#1C3A57"},
+        "100": {
+          "$value": "#133150",
+          "$description": "Deepest navy — dark mode nav"
+        }
+      },
+
+      "brand": {
+        "$description": "Enertiv signature sky-blue. Primary interactive color in light mode.",
+        "25": {"$value": "#F0FBFF"},
+        "50": {"$value": "#E1F5FB"},
+        "100": {"$value": "#C2DFEE"},
+        "200": {"$value": "#86D2EF"},
+        "300": {"$value": "#5CC0E8"},
+        "400": {
+          "$value": "#40B4E5",
+          "$description": "Primary brand blue — default CTA"
+        },
+        "500": {"$value": "#2EA6E1"},
+        "600": {"$value": "#2899D3"},
+        "700": {"$value": "#2186C0"},
+        "800": {"$value": "#1C4F65"},
+        "900": {"$value": "#133240"}
+      },
+
+      "action": {
+        "$description": "Muted blue-gray action scale — used for the UI.primary button style (slate/dark-teal CTA variant).",
+        "2": {"$value": "#F5F7F8"},
+        "32": {"$value": "#B0C5CD"},
+        "48": {"$value": "#86A6B3"},
+        "64": {"$value": "#5E7883"},
+        "80": {"$value": "#37464C"}
+      },
+
+      "red": {
+        "$description": "Error and danger scale. Source: Feedback2.Red_* in theme/index.ts.",
+        "50": {"$value": "#FFEAF0"},
+        "100": {"$value": "#FFCCD6"},
+        "200": {"$value": "#F7989E"},
+        "400": {"$value": "#FF4457"},
+        "500": {"$value": "#FF253C"},
+        "600": {"$value": "#F6183C"},
+        "700": {"$value": "#E40235", "$description": "Error default"},
+        "800": {"$value": "#D7002D"},
+        "900": {"$value": "#C0001E"}
+      },
+
+      "green": {
+        "$description": "Success and positive trend scale.",
+        "50": {"$value": "#E5F6E5"},
+        "100": {"$value": "#C1E6BE"},
+        "200": {"$value": "#98D694"},
+        "400": {"$value": "#45B944"},
+        "500": {"$value": "#02AD18"},
+        "600": {"$value": "#019E09"},
+        "700": {"$value": "#008C01", "$description": "Success default"}
+      },
+
+      "orange": {
+        "$description": "Warning and caution scale. Also used for maintenance/alert state.",
+        "50": {"$value": "#FFF4E0"},
+        "100": {"$value": "#FFE0B3"},
+        "200": {"$value": "#FFCC80"},
+        "400": {"$value": "#FEA826"},
+        "600": {"$value": "#EF6D01"},
+        "700": {"$value": "#F67C01", "$description": "Warning default"}
+      },
+
+      "yellow": {
+        "$description": "Advisory and highlight scale. Lighter tones for chip/pill backgrounds.",
+        "4": {"$value": "#FEFCF5"},
+        "50": {"$value": "#FDFBE5"},
+        "100": {"$value": "#FBF4BE"},
+        "200": {"$value": "#F8ED93"},
+        "700": {"$value": "#EDB210"},
+        "800": {"$value": "#EC9908"},
+        "900": {"$value": "#E76F00"}
+      },
+
+      "indigo": {
+        "$description": "AI and ML feature accent color. Also used for focus rings and template highlights.",
+        "50": {"$value": "#E7E9FC"},
+        "100": {"$value": "#C2C7F6"},
+        "200": {"$value": "#98A2F0"},
+        "300": {"$value": "#697FEA"},
+        "400": {"$value": "#4061E5"},
+        "500": {"$value": "#0044DE"},
+        "600": {
+          "$value": "#6C5AEF",
+          "$description": "Focus ring / template accent"
+        },
+        "700": {"$value": "#0131C7"},
+        "800": {
+          "$value": "#0025BD",
+          "$description": "AI feature color (top nav)"
+        },
+        "900": {"$value": "#000CA5"}
+      },
+
+      "utility": {
+        "$description": "Energy utility type colors for data visualization. Designed to be distinct in both light and dark mode. Light values from LIGHT_COLORS.data.utilities.",
+        "electricity": {
+          "$value": "#FF6BD6",
+          "$description": "Total electricity (light mode)"
+        },
+        "electricity-supply": {"$value": "#F21BB6"},
+        "electricity-delivery": {"$value": "#AC017C"},
+        "water": {"$value": "#3FB4E5"},
+        "gas": {"$value": "#00C371"},
+        "gas-supply": {"$value": "#02A460"},
+        "gas-delivery": {"$value": "#02854E"},
+        "steam": {"$value": "#FF9900"},
+        "sanitation": {"$value": "#B8B105"}
+      },
+
+      "utility-dark": {
+        "$description": "Adjusted utility colors for dark mode / dark chart backgrounds. From DARK_COLORS.data.utilities.",
+        "electricity": {"$value": "#D15CC5"},
+        "electricity-supply": {"$value": "#C01FB0"},
+        "electricity-delivery": {"$value": "#B700A5"},
+        "water": {"$value": "#5CABD2"},
+        "gas": {"$value": "#5CBE7C"},
+        "gas-supply": {"$value": "#1FA64B"},
+        "gas-delivery": {"$value": "#009A33"},
+        "steam": {"$value": "#FF993A"},
+        "sanitation": {"$value": "#E8C71F"}
+      },
+
+      "chart": {
+        "$description": "Sequential data series colors for line/bar charts. 11 steps provide enough variety for dense dashboards.",
+        "1": {"$value": "#FF6BD6"},
+        "2": {"$value": "#A73E92"},
+        "3": {"$value": "#613360"},
+        "4": {"$value": "#36CFAB"},
+        "5": {"$value": "#41FCCB"},
+        "6": {"$value": "#24F163"},
+        "7": {"$value": "#1FBE0D"},
+        "8": {"$value": "#3FB4E5"},
+        "9": {"$value": "#939598"},
+        "10": {"$value": "#58595B"},
+        "11": {"$value": "#061C2C"}
+      }
+    },
+
+    "spacing": {
+      "$type": "dimension",
+      "$description": "4px base-unit spacing scale. Used for padding, margin, gap. Step names are multipliers (step-4 = 4 × 4px = 16px).",
+      "0": {"$value": "0px"},
+      "1": {"$value": "4px"},
+      "2": {"$value": "8px"},
+      "3": {"$value": "12px"},
+      "4": {"$value": "16px"},
+      "5": {"$value": "20px"},
+      "6": {"$value": "24px"},
+      "8": {"$value": "32px"},
+      "10": {"$value": "40px"},
+      "12": {"$value": "48px"},
+      "16": {"$value": "64px"},
+      "20": {"$value": "80px"},
+      "24": {"$value": "96px"},
+      "32": {"$value": "128px"}
+    },
+
+    "borderRadius": {
+      "$type": "dimension",
+      "$description": "Border radius scale. Enterprise default is sm (4px). Full reserved for avatars, pills, badges.",
+      "none": {"$value": "0px"},
+      "xs": {"$value": "2px"},
+      "sm": {
+        "$value": "4px",
+        "$description": "Default — buttons, inputs, chips"
+      },
+      "md": {"$value": "8px", "$description": "Cards, modals, panels"},
+      "lg": {"$value": "12px"},
+      "xl": {"$value": "16px"},
+      "full": {"$value": "9999px", "$description": "Avatars, pills, badges"}
+    },
+
+    "typography": {
+      "fontFamily": {
+        "$type": "fontFamily",
+        "sans": {
+          "$value": "'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif",
+          "$description": "Primary UI typeface"
+        },
+        "mono": {
+          "$value": "'JetBrains Mono', 'Fira Code', 'Courier New', monospace",
+          "$description": "Code, numeric data, meter readings"
+        }
+      },
+      "fontSize": {
+        "$type": "dimension",
+        "$description": "Type scale. Base body = md (14px). Data-dense UIs favor sm for secondary info.",
+        "xs": {
+          "$value": "11px",
+          "$description": "Timestamp, helper text, badge label"
+        },
+        "sm": {
+          "$value": "12px",
+          "$description": "Table cell secondary, input footnote"
+        },
+        "md": {"$value": "14px", "$description": "Body default"},
+        "lg": {"$value": "16px", "$description": "Section label, form label"},
+        "xl": {"$value": "18px", "$description": "Card heading"},
+        "2xl": {"$value": "20px", "$description": "Page heading sm"},
+        "3xl": {"$value": "24px", "$description": "Page heading"},
+        "4xl": {"$value": "28px"},
+        "5xl": {"$value": "32px", "$description": "Hero metric / KPI display"}
+      },
+      "fontWeight": {
+        "$type": "fontWeight",
+        "regular": {"$value": "400"},
+        "medium": {
+          "$value": "500",
+          "$description": "Tab labels (selected), button text"
+        },
+        "semibold": {
+          "$value": "600",
+          "$description": "Card heading, form label"
+        },
+        "bold": {"$value": "700", "$description": "KPI value, alert heading"}
+      },
+      "lineHeight": {
+        "$type": "number",
+        "tight": {"$value": "1.2", "$description": "Headings, KPI numbers"},
+        "normal": {"$value": "1.4", "$description": "Body text default"},
+        "relaxed": {"$value": "1.6", "$description": "Long-form help text"}
+      },
+      "letterSpacing": {
+        "$type": "dimension",
+        "tight": {
+          "$value": "-0.01em",
+          "$description": "Display / hero numerics"
+        },
+        "normal": {"$value": "0em"},
+        "wide": {
+          "$value": "0.02em",
+          "$description": "Small caps labels, badge text"
+        },
+        "wider": {"$value": "0.04em", "$description": "Overline / category tag"}
+      }
+    },
+
+    "shadow": {
+      "$type": "shadow",
+      "$description": "Elevation scale. Uses brand navy rgba for consistent tinting.",
+      "none": {"$value": "none"},
+      "sm": {
+        "$value": "0 1px 3px rgba(43, 61, 79, 0.08), 0 1px 2px rgba(43, 61, 79, 0.06)",
+        "$description": "Cards, inline panels"
+      },
+      "md": {
+        "$value": "0 2px 8px rgba(43, 61, 79, 0.10), 0 1px 3px rgba(43, 61, 79, 0.08)",
+        "$description": "Dropdowns, popovers"
+      },
+      "lg": {
+        "$value": "0 4px 16px rgba(43, 61, 79, 0.12), 0 2px 6px rgba(43, 61, 79, 0.08)",
+        "$description": "Modals, drawers"
+      },
+      "xl": {
+        "$value": "0 8px 24px rgba(43, 61, 79, 0.16), 0 4px 10px rgba(43, 61, 79, 0.10)",
+        "$description": "Full-screen overlays"
+      },
+      "inner": {
+        "$value": "inset 0 1px 3px rgba(43, 61, 79, 0.10)",
+        "$description": "Inset for inputs, wells"
+      }
+    }
+  },
+
+  "semantic/light": {
+    "$description": "Light mode semantic aliases. Neutral-gray UI. Reference primitive tokens; never use raw hex here.",
+
+    "color": {
+      "$type": "color",
+
+      "background": {
+        "canvas": {
+          "$value": "{primitive.color.neutral.0}",
+          "$description": "Root page background"
+        },
+        "surface": {
+          "$value": "{primitive.color.neutral.4}",
+          "$description": "Default card / panel surface"
+        },
+        "raised": {
+          "$value": "{primitive.color.neutral.0}",
+          "$description": "Modals, drawers — above surface"
+        },
+        "sunken": {
+          "$value": "{primitive.color.neutral.6}",
+          "$description": "Inset wells, code blocks"
+        },
+        "muted": {
+          "$value": "{primitive.color.neutral.4}",
+          "$description": "Disabled sections, skeleton"
+        },
+        "overlay": {
+          "$value": "rgba(13, 15, 15, 0.48)",
+          "$description": "Modal backdrop"
+        }
+      },
+
+      "border": {
+        "default": {
+          "$value": "{primitive.color.neutral.16}",
+          "$description": "Standard separators, card outline"
+        },
+        "subtle": {
+          "$value": "{primitive.color.neutral.10}",
+          "$description": "Dividers inside components"
+        },
+        "strong": {
+          "$value": "{primitive.color.neutral.32}",
+          "$description": "Emphasized borders, table header"
+        },
+        "focus": {
+          "$value": "{primitive.color.brand.400}",
+          "$description": "Keyboard focus ring"
+        },
+        "interactive": {
+          "$value": "{primitive.color.neutral.24}",
+          "$description": "Input default border"
+        }
+      },
+
+      "text": {
+        "primary": {
+          "$value": "{primitive.color.neutral.88}",
+          "$description": "Body text, labels"
+        },
+        "secondary": {
+          "$value": "{primitive.color.neutral.64}",
+          "$description": "Supportive / subdued text"
+        },
+        "tertiary": {
+          "$value": "{primitive.color.neutral.56}",
+          "$description": "Placeholder, footnote, na values"
+        },
+        "disabled": {
+          "$value": "{primitive.color.neutral.40}",
+          "$description": "Disabled field text"
+        },
+        "inverse": {
+          "$value": "{primitive.color.neutral.0}",
+          "$description": "Text on dark backgrounds"
+        },
+        "link": {
+          "$value": "{primitive.color.brand.500}",
+          "$description": "Inline links"
+        },
+        "onBrand": {
+          "$value": "{primitive.color.brand.900}",
+          "$description": "Text on brand-blue button"
+        }
+      },
+
+      "icon": {
+        "default": {
+          "$value": "{primitive.color.neutral.80}",
+          "$description": "Standard icon fill"
+        },
+        "subtle": {
+          "$value": "{primitive.color.neutral.56}",
+          "$description": "Supportive icon"
+        },
+        "inverse": {
+          "$value": "{primitive.color.neutral.0}",
+          "$description": "Icon on dark bg"
+        },
+        "onBrand": {
+          "$value": "{primitive.color.brand.900}",
+          "$description": "Icon on brand button"
+        },
+        "ai": {
+          "$value": "{primitive.color.indigo.800}",
+          "$description": "AI feature icon"
+        }
+      },
+
+      "interactive": {
+        "brand-bg": {
+          "$value": "{primitive.color.brand.400}",
+          "$description": "Primary CTA background"
+        },
+        "brand-bg-hover": {
+          "$value": "{primitive.color.brand.500}",
+          "$description": "Primary CTA hover"
+        },
+        "brand-bg-pressed": {
+          "$value": "{primitive.color.brand.600}",
+          "$description": "Primary CTA pressed"
+        },
+        "brand-text": {
+          "$value": "{primitive.color.brand.900}",
+          "$description": "Text on brand button"
+        },
+        "ui-bg": {
+          "$value": "{primitive.color.action.80}",
+          "$description": "UI primary button bg (slate)"
+        },
+        "ui-bg-hover": {
+          "$value": "{primitive.color.navy.88}",
+          "$description": "UI primary hover"
+        },
+        "ui-text": {
+          "$value": "{primitive.color.action.2}",
+          "$description": "Text on UI button"
+        },
+        "secondary-bg": {
+          "$value": "{primitive.color.neutral.0}",
+          "$description": "Secondary button bg"
+        },
+        "secondary-border": {
+          "$value": "{primitive.color.action.48}",
+          "$description": "Secondary button border"
+        },
+        "secondary-text": {
+          "$value": "{primitive.color.action.80}",
+          "$description": "Secondary button text"
+        },
+        "tertiary-bg": {
+          "$value": "{primitive.color.neutral.4}",
+          "$description": "Tertiary / ghost button bg"
+        },
+        "tertiary-text": {
+          "$value": "{primitive.color.action.80}",
+          "$description": "Tertiary button text"
+        },
+        "destructive-bg": {
+          "$value": "{primitive.color.red.700}",
+          "$description": "Danger primary button"
+        },
+        "destructive-text": {
+          "$value": "{primitive.color.red.50}",
+          "$description": "Text on danger button"
+        }
+      },
+
+      "feedback": {
+        "error-bg": {
+          "$value": "{primitive.color.red.50}",
+          "$description": "Error state background"
+        },
+        "error-border": {
+          "$value": "{primitive.color.red.200}",
+          "$description": "Error input border"
+        },
+        "error-text": {
+          "$value": "{primitive.color.red.700}",
+          "$description": "Error message text"
+        },
+        "error-icon": {"$value": "{primitive.color.red.700}"},
+        "warning-bg": {
+          "$value": "{primitive.color.orange.50}",
+          "$description": "Warning toast/banner bg"
+        },
+        "warning-border": {"$value": "{primitive.color.orange.200}"},
+        "warning-text": {"$value": "{primitive.color.orange.700}"},
+        "warning-icon": {"$value": "{primitive.color.orange.600}"},
+        "success-bg": {"$value": "{primitive.color.green.50}"},
+        "success-border": {"$value": "{primitive.color.green.200}"},
+        "success-text": {"$value": "{primitive.color.green.700}"},
+        "success-icon": {"$value": "{primitive.color.green.700}"},
+        "info-bg": {"$value": "{primitive.color.brand.50}"},
+        "info-border": {"$value": "{primitive.color.brand.200}"},
+        "info-text": {"$value": "{primitive.color.brand.800}"},
+        "info-icon": {"$value": "{primitive.color.brand.700}"}
+      },
+
+      "nav": {
+        "container-bg": {
+          "$value": "{primitive.color.neutral.2}",
+          "$description": "Left nav container"
+        },
+        "container-border": {"$value": "{primitive.color.neutral.12}"},
+        "divider": {"$value": "{primitive.color.neutral.16}"},
+        "item-default-bg": {"$value": "{primitive.color.neutral.2}"},
+        "item-hover-bg": {"$value": "{primitive.color.neutral.10}"},
+        "item-active-bg": {"$value": "{primitive.color.neutral.12}"},
+        "item-text": {"$value": "{primitive.color.neutral.88}"},
+        "item-icon": {"$value": "{primitive.color.neutral.80}"}
+      },
+
+      "topnav": {
+        "bg": {"$value": "{primitive.color.neutral.0}"},
+        "border": {"$value": "{primitive.color.neutral.12}"},
+        "divider": {"$value": "{primitive.color.neutral.16}"},
+        "user-avatar-bg": {"$value": "{primitive.color.neutral.10}"},
+        "user-icon": {"$value": "{primitive.color.neutral.80}"}
+      },
+
+      "table": {
+        "header-bg": {"$value": "{primitive.color.neutral.4}"},
+        "header-border": {"$value": "{primitive.color.neutral.32}"},
+        "header-text": {"$value": "{primitive.color.neutral.80}"},
+        "header-icon": {"$value": "{primitive.color.neutral.80}"},
+        "cell-bg": {"$value": "{primitive.color.neutral.0}"},
+        "cell-border": {"$value": "{primitive.color.neutral.16}"},
+        "cell-text": {"$value": "{primitive.color.neutral.80}"},
+        "cell-text-sub": {"$value": "{primitive.color.neutral.64}"},
+        "cell-text-na": {"$value": "{primitive.color.neutral.48}"},
+        "footer-bg": {"$value": "{primitive.color.neutral.4}"},
+        "footer-border": {"$value": "{primitive.color.neutral.32}"}
+      },
+
+      "input": {
+        "label": {"$value": "{primitive.color.neutral.80}"},
+        "placeholder": {"$value": "{primitive.color.neutral.56}"},
+        "text": {"$value": "{primitive.color.neutral.88}"},
+        "bg": {"$value": "{primitive.color.neutral.0}"},
+        "border": {"$value": "{primitive.color.neutral.24}"},
+        "bg-hover": {"$value": "{primitive.color.neutral.6}"},
+        "border-hover": {"$value": "{primitive.color.neutral.24}"},
+        "border-focus": {"$value": "{primitive.color.brand.400}"},
+        "bg-disabled": {"$value": "{primitive.color.neutral.8}"},
+        "text-disabled": {"$value": "{primitive.color.neutral.48}"},
+        "bg-error": {"$value": "{primitive.color.neutral.4}"},
+        "border-error": {"$value": "{primitive.color.red.700}"},
+        "required-asterisk": {"$value": "{primitive.color.red.700}"}
+      },
+
+      "chip": {
+        "default-bg": {"$value": "{primitive.color.neutral.4}"},
+        "default-text": {"$value": "{primitive.color.neutral.72}"},
+        "success-bg": {"$value": "{primitive.color.green.50}"},
+        "success-text": {"$value": "{primitive.color.green.700}"},
+        "warning-bg": {"$value": "{primitive.color.orange.50}"},
+        "warning-text": {"$value": "{primitive.color.orange.700}"},
+        "error-bg": {"$value": "{primitive.color.red.50}"},
+        "error-text": {"$value": "{primitive.color.red.700}"}
+      }
+    },
+
+    "spacing": {
+      "$type": "dimension",
+      "component-xs": {
+        "$value": "{primitive.spacing.1}",
+        "$description": "Icon padding, tight inline gap"
+      },
+      "component-sm": {
+        "$value": "{primitive.spacing.2}",
+        "$description": "Chip padding, badge inner"
+      },
+      "component-md": {
+        "$value": "{primitive.spacing.3}",
+        "$description": "Input padding, button padding Y"
+      },
+      "component-lg": {
+        "$value": "{primitive.spacing.4}",
+        "$description": "Button padding X, card inner"
+      },
+      "layout-sm": {
+        "$value": "{primitive.spacing.4}",
+        "$description": "Compact section gap"
+      },
+      "layout-md": {
+        "$value": "{primitive.spacing.6}",
+        "$description": "Standard section gap"
+      },
+      "layout-lg": {
+        "$value": "{primitive.spacing.8}",
+        "$description": "Page section gap"
+      },
+      "layout-xl": {
+        "$value": "{primitive.spacing.12}",
+        "$description": "Hero section gap"
+      }
+    },
+
+    "borderRadius": {
+      "$type": "dimension",
+      "button": {"$value": "{primitive.borderRadius.sm}"},
+      "card": {"$value": "{primitive.borderRadius.md}"},
+      "input": {"$value": "{primitive.borderRadius.sm}"},
+      "chip": {"$value": "{primitive.borderRadius.sm}"},
+      "badge": {"$value": "{primitive.borderRadius.sm}"},
+      "modal": {"$value": "{primitive.borderRadius.md}"},
+      "tooltip": {"$value": "{primitive.borderRadius.sm}"},
+      "avatar": {"$value": "{primitive.borderRadius.full}"},
+      "pill": {"$value": "{primitive.borderRadius.full}"}
+    },
+
+    "shadow": {
+      "$type": "shadow",
+      "card": {"$value": "{primitive.shadow.sm}"},
+      "panel": {"$value": "{primitive.shadow.md}"},
+      "modal": {"$value": "{primitive.shadow.lg}"},
+      "popover": {"$value": "{primitive.shadow.md}"},
+      "tooltip": {"$value": "{primitive.shadow.sm}"}
+    }
+  },
+
+  "semantic/dark": {
+    "$description": "Dark mode (blue-steel) semantic aliases. Navy-based UI matching Enertiv's dark palette (UI_DARK / DARK_COLORS in const.ts). Nav is deep navy; surfaces are lighter blue-steel.",
+
+    "color": {
+      "$type": "color",
+
+      "background": {
+        "canvas": {
+          "$value": "{primitive.color.navy.12}",
+          "$description": "Root page background (blue-steel)"
+        },
+        "surface": {
+          "$value": "{primitive.color.navy.8}",
+          "$description": "Card / panel surface"
+        },
+        "raised": {
+          "$value": "{primitive.color.navy.8}",
+          "$description": "Modals, drawers"
+        },
+        "sunken": {
+          "$value": "{primitive.color.navy.100}",
+          "$description": "Inset wells, deep navy sink"
+        },
+        "muted": {
+          "$value": "{primitive.color.navy.16}",
+          "$description": "Disabled sections"
+        },
+        "overlay": {
+          "$value": "rgba(19, 49, 80, 0.72)",
+          "$description": "Modal backdrop (navy tint)"
+        }
+      },
+
+      "border": {
+        "default": {
+          "$value": "{primitive.color.navy.24}",
+          "$description": "Standard separators"
+        },
+        "subtle": {
+          "$value": "{primitive.color.navy.20}",
+          "$description": "Dividers inside components"
+        },
+        "strong": {
+          "$value": "{primitive.color.navy.32}",
+          "$description": "Emphasized borders"
+        },
+        "focus": {
+          "$value": "{primitive.color.brand.300}",
+          "$description": "Keyboard focus ring"
+        },
+        "interactive": {
+          "$value": "{primitive.color.navy.32}",
+          "$description": "Input default border"
+        }
+      },
+
+      "text": {
+        "primary": {
+          "$value": "{primitive.color.navy.96}",
+          "$description": "Primary body text"
+        },
+        "secondary": {
+          "$value": "{primitive.color.navy.80}",
+          "$description": "Supportive / subdued"
+        },
+        "tertiary": {
+          "$value": "{primitive.color.navy.72}",
+          "$description": "Placeholder, footnote, na"
+        },
+        "disabled": {
+          "$value": "{primitive.color.navy.56}",
+          "$description": "Disabled text"
+        },
+        "inverse": {
+          "$value": "{primitive.color.navy.0}",
+          "$description": "Text on very dark backgrounds"
+        },
+        "link": {
+          "$value": "{primitive.color.brand.300}",
+          "$description": "Links in dark mode"
+        },
+        "onBrand": {
+          "$value": "{primitive.color.navy.100}",
+          "$description": "Text on brand-blue button"
+        }
+      },
+
+      "icon": {
+        "default": {
+          "$value": "{primitive.color.navy.20}",
+          "$description": "Standard icon"
+        },
+        "subtle": {
+          "$value": "{primitive.color.navy.32}",
+          "$description": "Supportive icon"
+        },
+        "inverse": {
+          "$value": "{primitive.color.navy.96}",
+          "$description": "Icon on deep navy bg"
+        },
+        "onBrand": {
+          "$value": "{primitive.color.navy.0}",
+          "$description": "Icon on brand button"
+        },
+        "ai": {
+          "$value": "{primitive.color.indigo.600}",
+          "$description": "AI feature icon (dark)"
+        }
+      },
+
+      "interactive": {
+        "brand-bg": {"$value": "{primitive.color.brand.400}"},
+        "brand-bg-hover": {"$value": "{primitive.color.brand.300}"},
+        "brand-bg-pressed": {"$value": "{primitive.color.brand.500}"},
+        "brand-text": {"$value": "{primitive.color.navy.100}"},
+        "ui-bg": {
+          "$value": "{primitive.color.navy.88}",
+          "$description": "UI primary button (navy)"
+        },
+        "ui-bg-hover": {"$value": "{primitive.color.navy.92}"},
+        "ui-text": {"$value": "{primitive.color.navy.8}"},
+        "secondary-bg": {"$value": "{primitive.color.navy.8}"},
+        "secondary-border": {"$value": "{primitive.color.navy.56}"},
+        "secondary-text": {"$value": "{primitive.color.navy.96}"},
+        "tertiary-bg": {"$value": "{primitive.color.navy.8}"},
+        "tertiary-text": {"$value": "{primitive.color.navy.96}"},
+        "destructive-bg": {"$value": "#C81F39"},
+        "destructive-text": {"$value": "#FCF5F6"}
+      },
+
+      "feedback": {
+        "error-bg": {"$value": "#F7E0E4"},
+        "error-border": {"$value": "#CD334B"},
+        "error-text": {"$value": "#CD334B"},
+        "error-icon": {"$value": "#C30A27"},
+        "warning-bg": {"$value": "#FFF1E4"},
+        "warning-border": {"$value": "#FFA24C"},
+        "warning-text": {"$value": "#FF8B1F"},
+        "warning-icon": {"$value": "#FF9028"},
+        "success-bg": {"$value": "#E0F3E7"},
+        "success-border": {"$value": "#33AE5C"},
+        "success-text": {"$value": "#1FA64B"},
+        "success-icon": {"$value": "#0A9E3B"},
+        "info-bg": {"$value": "#E0EFF7"},
+        "info-border": {"$value": "#3395C7"},
+        "info-text": {"$value": "{primitive.color.navy.96}"},
+        "info-icon": {"$value": "{primitive.color.navy.72}"}
+      },
+
+      "nav": {
+        "container-bg": {
+          "$value": "{primitive.color.navy.100}",
+          "$description": "Left nav deep navy"
+        },
+        "container-border": {"$value": "{primitive.color.navy.100}"},
+        "divider": {"$value": "{primitive.color.navy.88}"},
+        "item-default-bg": {"$value": "{primitive.color.navy.100}"},
+        "item-hover-bg": {"$value": "{primitive.color.navy.92}"},
+        "item-active-bg": {"$value": "{primitive.color.navy.96}"},
+        "item-text": {"$value": "{primitive.color.navy.20}"},
+        "item-icon": {"$value": "{primitive.color.navy.20}"}
+      },
+
+      "topnav": {
+        "bg": {"$value": "{primitive.color.navy.12}"},
+        "border": {"$value": "{primitive.color.navy.24}"},
+        "divider": {"$value": "{primitive.color.navy.20}"},
+        "user-avatar-bg": {"$value": "{primitive.color.navy.8}"},
+        "user-icon": {"$value": "{primitive.color.navy.88}"}
+      },
+
+      "table": {
+        "header-bg": {"$value": "{primitive.color.navy.8}"},
+        "header-border": {"$value": "{primitive.color.navy.32}"},
+        "header-text": {"$value": "{primitive.color.navy.88}"},
+        "header-icon": {"$value": "{primitive.color.navy.88}"},
+        "cell-bg": {"$value": "{primitive.color.navy.12}"},
+        "cell-border": {"$value": "{primitive.color.navy.24}"},
+        "cell-text": {"$value": "{primitive.color.navy.96}"},
+        "cell-text-sub": {"$value": "{primitive.color.navy.72}"},
+        "cell-text-na": {"$value": "{primitive.color.navy.56}"},
+        "footer-bg": {"$value": "{primitive.color.navy.8}"},
+        "footer-border": {"$value": "{primitive.color.navy.32}"}
+      },
+
+      "input": {
+        "label": {"$value": "{primitive.color.navy.88}"},
+        "placeholder": {"$value": "{primitive.color.navy.56}"},
+        "text": {"$value": "{primitive.color.navy.96}"},
+        "bg": {"$value": "{primitive.color.navy.8}"},
+        "border": {"$value": "{primitive.color.navy.56}"},
+        "bg-hover": {"$value": "{primitive.color.navy.12}"},
+        "border-hover": {"$value": "{primitive.color.navy.64}"},
+        "border-focus": {"$value": "{primitive.color.brand.300}"},
+        "bg-disabled": {"$value": "{primitive.color.navy.16}"},
+        "text-disabled": {"$value": "{primitive.color.navy.56}"},
+        "bg-error": {"$value": "{primitive.color.navy.8}"},
+        "border-error": {"$value": "#CD334B"},
+        "required-asterisk": {"$value": "#CD334B"}
+      },
+
+      "chip": {
+        "default-bg": {"$value": "{primitive.color.navy.12}"},
+        "default-text": {"$value": "{primitive.color.navy.96}"},
+        "success-bg": {"$value": "#E0F3E7"},
+        "success-text": {"$value": "#0A9E3B"},
+        "warning-bg": {"$value": "#FFF1E4"},
+        "warning-text": {"$value": "#FF9028"},
+        "error-bg": {"$value": "#F7E0E4"},
+        "error-text": {"$value": "#C30A27"}
+      }
+    },
+
+    "spacing": {
+      "$type": "dimension",
+      "component-xs": {"$value": "{primitive.spacing.1}"},
+      "component-sm": {"$value": "{primitive.spacing.2}"},
+      "component-md": {"$value": "{primitive.spacing.3}"},
+      "component-lg": {"$value": "{primitive.spacing.4}"},
+      "layout-sm": {"$value": "{primitive.spacing.4}"},
+      "layout-md": {"$value": "{primitive.spacing.6}"},
+      "layout-lg": {"$value": "{primitive.spacing.8}"},
+      "layout-xl": {"$value": "{primitive.spacing.12}"}
+    },
+
+    "borderRadius": {
+      "$type": "dimension",
+      "button": {"$value": "{primitive.borderRadius.sm}"},
+      "card": {"$value": "{primitive.borderRadius.md}"},
+      "input": {"$value": "{primitive.borderRadius.sm}"},
+      "chip": {"$value": "{primitive.borderRadius.sm}"},
+      "badge": {"$value": "{primitive.borderRadius.sm}"},
+      "modal": {"$value": "{primitive.borderRadius.md}"},
+      "tooltip": {"$value": "{primitive.borderRadius.sm}"},
+      "avatar": {"$value": "{primitive.borderRadius.full}"},
+      "pill": {"$value": "{primitive.borderRadius.full}"}
+    },
+
+    "shadow": {
+      "$type": "shadow",
+      "card": {"$value": "{primitive.shadow.sm}"},
+      "panel": {"$value": "{primitive.shadow.md}"},
+      "modal": {"$value": "{primitive.shadow.lg}"},
+      "popover": {"$value": "{primitive.shadow.md}"},
+      "tooltip": {"$value": "{primitive.shadow.sm}"}
+    }
+  }
+}

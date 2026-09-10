@@ -72,9 +72,9 @@ function TabsDemo() {
   );
 }
 
-export function PrimitivesPage() {
+export function CommonPage() {
   return (
-    <PageShell title="Primitives">
+    <PageShell title="common">
       <TileGrid>
         <CatalogTile
           name="Button"

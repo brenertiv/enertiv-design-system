@@ -2,9 +2,10 @@
 
 | Field | Value |
 | --- | --- |
-| Last attempted clone | `git clone https://bitbucket.org/enertiv/enertiv-web.git` |
-| Result | Failed: Bitbucket HTTPS had no username (`Device not configured`) |
-| FRONTEND_SHA | *unknown — clone pending credentials* |
-| Tokens in catalog | User-supplied raw token module (2026-09-09), matching production comments (`tokens/enertiv.tokens.json`, `libs/theme/enertiv-mui-theme`) |
+| Local checkout | `/Users/enertiv/Desktop/projects/enertiv-enertiv-web-82264615de49` |
+| Git | Source download (no `.git` in that folder). Bitbucket id in folder name: `82264615de49` |
+| Token constants | `src/pages/Sandbox/theme/enertiv-tokens.ts` → catalog `src/theme/enertiv-tokens.ts` |
+| MUI theme factory | `src/pages/Sandbox/theme/enertiv-mui-theme.ts` |
+| DTCG JSON | `tokens/enertiv.tokens.json` → catalog `src/theme/enertiv.tokens.json` |
 
-When Bitbucket auth is available, clone to `/Users/enertiv/Desktop/projects/enertiv-web`, copy the token file and `enertiv-mui-theme`, and record the SHA here.
+Replace these copies when the checkout updates. Do not edit hex values in the catalog copies.

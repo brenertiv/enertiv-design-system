@@ -1,0 +1,11 @@
+export const ENV = {
+  ENV: "catalog",
+  AMCHART_LICENSE: "",
+  INTERCOM_ID: "",
+  BACKEND_HOSTNAME: "",
+  AMCHART5_LICENSE: "",
+  FIREBASE_CONFIG: "",
+  PUSH_CERTIFICATE: "",
+  MIXPANEL_TOKEN: "",
+  CARTO_API_KEY: "",
+};

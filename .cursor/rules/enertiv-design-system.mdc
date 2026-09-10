@@ -1,0 +1,6 @@
+---
+description: Enertiv design system rules for agents working in this catalog
+alwaysApply: true
+---
+
+Read `docs/agents/enertiv-design-system.md` before adding or changing UI in this catalog. Do not invent components that are not in production `enertiv-web`.
