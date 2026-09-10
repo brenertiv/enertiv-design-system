@@ -1,0 +1,1 @@
+import{a as o,b as i,c,g as n}from"./index-BwBm1m4V.js";var e={},r;function s(){if(r)return e;r=1;var t=o().default;Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var a=t(i()),u=c();return e.default=(0,a.default)((0,u.jsx)("path",{d:"M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"}),"Check"),e}var f=s();const v=n(f);export{v as C};
